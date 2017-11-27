@@ -17,14 +17,13 @@ class App extends Component {
   
 
   componentDidMount() {
-
-    var self = this;
-
-    axios.get('/api/posts')
-    .then(function (response) {
-      self.setState({
-        posts: response.posts,
+    axios
+    .get('/api/posts')
+    .then(response =>{
+      this.setState({
+        posts: response.data.posts,
       });
+      console.log(response);
     });
 
   }

@@ -11,24 +11,30 @@ import Subheader from 'material-ui/Subheader';
 class PostList extends Component {
   constructor(props) {
     super(props);
-
   }
   
   render() {
-      const posts = this.props.posts.map((post) =>
-        <ListItem
-          primaryText={post.title}
-          secondaryText={
-            <p>
-              <span>Created: {post.createdAt}</span>
-              <br/>
-              Author: {post.author}
-            </p>
-          }
-          secondaryTextLines={post.body}
-        />
+    
+    if (!this.props.posts) {
+      return (
+        <p>Loading...</p>
       );
+    }
 
+    let posts = this.props.posts.map((post, index) =>
+      <ListItem
+        key={index}
+        primaryText={post.title}
+        secondaryText={
+          <p>
+            <span>Created: {post.createdAt}</span>
+            <br/>
+            Author: {post.author}
+          </p>
+        }
+      />
+    );
+    
     return (
       <List>
         <Subheader>Recent posts</Subheader>
