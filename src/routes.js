@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom'
 import App from './components/App';
 import About from './components/About';
+import ViewPost from './components/ViewPost';
 import NotFound from './components/NotFound';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
-
-import FlatButton from 'material-ui/FlatButton';
 
 class Routes extends Component {
   render() {
@@ -21,9 +19,9 @@ class Routes extends Component {
 	        <Switch>
 		  		<Route exact path='/' component={App} />
 		  		<Route path='/about' component={About} />
+		  		<Route path='/post/:id' component={ViewPost} />
 		  		<Route path='*' component={NotFound} />
 			</Switch>
-			<FlatButton label="Default" />
 	      </div>
         </MuiThemeProvider>
     </main>

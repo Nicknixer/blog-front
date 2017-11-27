@@ -25,8 +25,8 @@ class App extends Component {
       });
       console.log(response);
     });
-
   }
+  
   render() {
     return (
         <PostList posts={this.state.posts} />
