@@ -15,9 +15,8 @@ class Routes extends Component {
                 <MuiThemeProvider>
 
                     <div className="App">
-                        <header className="App-header">
-                            <h1 className="App-title">Welcome to React</h1>
-                        </header>
+                        <h1>Simple blog</h1>
+                        <h2>Created by <a href="https://github.com/Nicknixer" target="_blank">Nikolay Sergeychuk</a></h2>
                         <Switch>
                             <Route exact path='/' component={App}/>
                             <Route path='/about' component={About}/>
