@@ -74,6 +74,7 @@ class ViewPost extends Component {
                 <p>
                     {this.state.post.body}
                 </p>
+                <RaisedButton label="Home" secondary={true} onClick={() => window.location = '/'}/>
                 <RaisedButton label="Edit" primary={true} />
                 <RaisedButton label="Delete" secondary={true} onClick={this.handleOpen} />
                 <Dialog
